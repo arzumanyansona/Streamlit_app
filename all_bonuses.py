@@ -6,12 +6,12 @@ from streamlit_plotly_events import plotly_events
 # --- Loaders ---
 def load_data():
     return pd.read_csv(
-        "all_data.csv"
+        "/Users/sonaarzumanyan/Downloads/Segmentation of predictions by root causes/all_data.csv"
     )
 
 def load_freespin_data():
     return pd.read_csv(
-        "freespin_per_game_data.csv"
+        "/Users/sonaarzumanyan/Downloads/Segmentation of predictions by root causes/freespin_per_game_data.csv"
     )
 
 def get_clicked_index(event_data):
@@ -25,6 +25,7 @@ def show_all_bonuses():
     # Part 1: Bonus Inefficiency Analysis
     # ===============================
     data = load_data()
+    
     negative_ngrs = data[data['CasinoNGR'] < 0].copy()
     positive_GGR = negative_ngrs[negative_ngrs['CasinoGGR'] >= 0]
 
@@ -95,7 +96,7 @@ def show_all_bonuses():
     st.header("Freespin Per Game Analysis")
 
     free_data = load_freespin_data()
-    
+
     free_negative_ngrs = free_data[free_data['CasinoNGR'] < 0].copy()
     free_positive_GGR = free_negative_ngrs[free_negative_ngrs['CasinoGGR'] >= 0]
 
@@ -134,7 +135,7 @@ def show_all_bonuses():
             freespin_features
         )
 
-        # fs_name_clean = option_fs_feature.replace('_EUR_total', '')
+        fs_name_clean = option_fs_feature.replace('_EUR_total', '')
 
         if option_fs == "Negative NGR Clients":
             new_col_fs = 'CasinoNGR_new'
@@ -143,7 +144,7 @@ def show_all_bonuses():
 
             st.write(f"Negative NGR clients count: {free_negative_ngrs.shape[0]}")
             st.markdown("<br>", unsafe_allow_html=True) 
-            st.write(f"Negative NGR clients count after removing '{option_fs_feature}': {new_data_fs.shape[0]}")
+            st.write(f"Negative NGR clients count after removing '{fs_name_clean}': {new_data_fs.shape[0]}")
 
         else:
             new_col_fs = 'CasinoNGR_new'
@@ -152,7 +153,7 @@ def show_all_bonuses():
 
             st.write(f"Negative NGR with positive GGR clients count: {free_positive_GGR.shape[0]}")
             st.markdown("<br>", unsafe_allow_html=True)  
-            st.write(f"Negative NGR clients count after removing '{option_fs_feature}': {new_data_fs.shape[0]}")
+            st.write(f"Negative NGR clients count after removing '{fs_name_clean}': {new_data_fs.shape[0]}")
 
 if __name__ == "__main__":
     show_all_bonuses()
