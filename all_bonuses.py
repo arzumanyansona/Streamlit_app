@@ -24,8 +24,8 @@ def show_all_bonuses():
     # ===============================
     data = load_data()
     
-    negative_ngrs = data[data['CasinoNGR_EUR_no_jpot_total'] < 0].copy()
-    positive_GGR = negative_ngrs[negative_ngrs['CasinoGGR_EUR_no_jpot_total'] >= 0]
+    negative_ngrs = data[data['CasinoNGR'] < 0].copy()
+    positive_GGR = negative_ngrs[negative_ngrs['CasinoGGR'] >= 0]
 
     bonuses_features = [
         'CasinoWageringCost_EUR_total', 'FreespinCost_EUR_total',
