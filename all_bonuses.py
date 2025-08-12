@@ -96,7 +96,7 @@ def show_all_bonuses():
     st.header("Freespin Per Game Analysis")
 
     free_data = load_freespin_data()
-
+    st.write("Columns:", data.columns.tolist())
     free_negative_ngrs = free_data[free_data['CasinoNGR'] < 0].copy()
     free_positive_GGR = free_negative_ngrs[free_negative_ngrs['CasinoGGR'] >= 0]
 
