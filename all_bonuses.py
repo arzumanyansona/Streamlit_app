@@ -25,7 +25,8 @@ def show_all_bonuses():
     # Part 1: Bonus Inefficiency Analysis
     # ===============================
     data = load_data()
-    
+    data = load_data()
+    st.write("Data columns:", data.columns.tolist())
     negative_ngrs = data[data['CasinoNGR'] < 0].copy()
     positive_GGR = negative_ngrs[negative_ngrs['CasinoGGR'] >= 0]
 
@@ -96,7 +97,7 @@ def show_all_bonuses():
     st.header("Freespin Per Game Analysis")
 
     free_data = load_freespin_data()
-    st.write("Columns:", data.columns.tolist())
+    st.write("Columns:", free_data.columns.tolist())
     free_negative_ngrs = free_data[free_data['CasinoNGR'] < 0].copy()
     free_positive_GGR = free_negative_ngrs[free_negative_ngrs['CasinoGGR'] >= 0]
 
