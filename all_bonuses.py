@@ -6,12 +6,12 @@ from streamlit_plotly_events import plotly_events
 # --- Loaders ---
 def load_data():
     return pd.read_csv(
-        "/Users/sonaarzumanyan/Downloads/Segmentation of predictions by root causes/all_data.csv"
+        "all_data.csv"
     )
 
 def load_freespin_data():
     return pd.read_csv(
-        "/Users/sonaarzumanyan/Downloads/Segmentation of predictions by root causes/freespin_per_game_data.csv"
+        "freespin_per_game_data.csv"
     )
 
 def get_clicked_index(event_data):
