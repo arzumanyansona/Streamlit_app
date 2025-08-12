@@ -6,12 +6,12 @@ from streamlit_plotly_events import plotly_events
 # --- Loaders ---
 def load_data():
     return pd.read_csv(
-        "/Users/sonaarzumanyan/Downloads/Segmentation of predictions by root causes/all_data.csv"
+        "all_data.csv"
     )
 
 def load_freespin_data():
     return pd.read_csv(
-        "/Users/sonaarzumanyan/Downloads/Segmentation of predictions by root causes/freespin_per_game_data.csv"
+        "freespin_per_game_data.csv"
     )
 
 def get_clicked_index(event_data):
@@ -138,7 +138,7 @@ def show_all_bonuses():
         fs_name_clean = option_fs_feature.replace('_EUR_total', '')
 
         if option_fs == "Negative NGR Clients":
-            new_col_fs = 'CasinoNGR_EUR_new'
+            new_col_fs = 'CasinoNGR_new'
             free_negative_ngrs[new_col_fs] = free_negative_ngrs['CasinoNGR'] + free_negative_ngrs[option_fs_feature]
             new_data_fs = free_negative_ngrs[free_negative_ngrs[new_col_fs] < 0]
 
