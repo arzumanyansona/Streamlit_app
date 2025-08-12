@@ -1,4 +1,4 @@
-ClientId,CasinoWageringCost_EUR_total,FreespinCost_EUR_total,HarmonyFreespin_EUR_total,CasinoCashback_EUR_total,CasinoCorrection_EUR_total,LuckyWheelCost_EUR_total,LoyaltyCost_EUR_total,CasinoGGR_EUR_no_jpot_total,CasinoNGR_EUR_no_jpot_total
+ClientId,CasinoWageringCost,FreespinCost,HarmonyFreespin,CasinoCashback,CasinoCorrection,LuckyWheelCost,LoyaltyCost,CasinoGGR,CasinoNGR
 44926,22.8808,4.969815400000001,0.0,0.0,0.0,0.0,0.0,1.2793036552000006,-26.5713117448
 1725330,0.0,2.05243086,0.0,0.0,0.233491,0.0,0.0,-95.2813744,-97.56729626
 1726579,8.288712,26.441789770000007,0.0,0.0,0.226976,2.43994,0.0,36.03435969,-1.363058080000001
