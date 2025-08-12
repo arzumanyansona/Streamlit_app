@@ -102,9 +102,7 @@ def show_all_bonuses():
 
     # Example: only numeric freespin-related columns
     freespin_features = ['EGT FreeSpin', 'FreeSpin SayYo', 'FreeSpin_0 Playtech',
-       'FreeSpin_0 Popok', 'FreeSpin_0 TopGame', 'FreeSpin',
-       'CasinoWageringCost', 'LoyaltyCost', 'HarmonyFreespin',
-       'CasinoCashback', 'CasinoCorrection',]
+       'FreeSpin_0 Popok', 'FreeSpin_0 TopGame', 'FreeSpin']
 
     free_summary = free_data[freespin_features].sum().sort_values(ascending=False).reset_index()
     free_summary.columns = ['FreespinFeature', 'Total(EUR)']
