@@ -25,7 +25,6 @@ def show_all_bonuses():
     # Part 1: Bonus Inefficiency Analysis
     # ===============================
     data = load_data()
-    data = load_data()
     negative_ngrs = data[data['CasinoNGR'] < 0].copy()
     positive_GGR = negative_ngrs[negative_ngrs['CasinoGGR'] >= 0]
 
